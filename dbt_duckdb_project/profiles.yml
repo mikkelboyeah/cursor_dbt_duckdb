@@ -1,0 +1,9 @@
+dbt_duckdb_profile:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: './data/duckdb_datawarehouse.duckdb'
+      extensions:
+        - httpfs
+        - parquet 
