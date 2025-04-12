@@ -8,4 +8,4 @@ dbt_duckdb_profile:
         - httpfs
         - parquet
       threads: 4
-      python_path: "{{ env_var('VIRTUAL_ENV') }}/Scripts/python.exe"  # Windows path 
+      # python_path: "{{ env_var('VIRTUAL_ENV') }}/Scripts/python.exe"  # Windows path 
