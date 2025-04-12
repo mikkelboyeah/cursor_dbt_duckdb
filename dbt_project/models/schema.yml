@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_sample
+    description: "Sample staging model with product data"
+    columns:
+      - name: id
+        description: "The primary key for products"
+        tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: "Product name"
+      - name: price
+        description: "Product price"
+      - name: loaded_at
+        description: "Timestamp when the record was loaded"
+
+  - name: int_products_enhanced
+    description: "Intermediate model with enhanced product data"
+    columns:
+      - name: id
+        description: "The primary key for products"
+      - name: product_name
+        description: "Product name"
+      - name: price
+        description: "Product price"
+      - name: price_with_tax
+        description: "Product price with tax applied"
+      - name: price_category
+        description: "Price category (Low/Medium/High)"
+      - name: loaded_at
+        description: "Timestamp when the record was loaded"
+
+  - name: mart_product_analysis
+    description: "Mart model with product analysis by price category"
+    columns:
+      - name: price_category
+        description: "Price category (Low/Medium/High)"
+        tests:
+          - not_null
+      - name: product_count
+        description: "Count of products in this category"
+      - name: avg_price
+        description: "Average price in this category"
+      - name: total_price
+        description: "Sum of prices in this category"
+      - name: min_price
+        description: "Minimum price in this category"
+      - name: max_price
+        description: "Maximum price in this category" 
