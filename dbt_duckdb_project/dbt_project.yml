@@ -23,4 +23,12 @@ models:
     intermediate:
       +materialized: ephemeral
     mart:
-      +materialized: table 
+      +materialized: table
+    python:
+      +materialized: table
+      +packages:
+        - pandas
+        - requests
+        - beautifulsoup4
+        - numpy
+        - lxml 
