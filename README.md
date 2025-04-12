@@ -39,13 +39,13 @@ This project uses dbt (data build tool) with DuckDB as the underlying database.
 
 4. Use the dbt project:
    ```
-   cd dbt_duckdb_project
+   cd dbt_project
    dbt run  # This will run all models
    ```
    
 ## Project Structure
 
-- `dbt_duckdb_project/` - Contains the dbt project
+- `dbt_project/` - Contains the dbt project
   - `models/` - SQL models
     - `staging/` - Initial data processing (materialized as views)
     - `intermediate/` - Transformed data (materialized as ephemeral)
@@ -80,4 +80,4 @@ Benefits:
 
 Dependencies are managed through:
 1. `requirements.txt` - Python package dependencies (installed with project-local uv)
-2. `dbt_duckdb_project/packages.yml` - dbt packages (if needed) 
+2. `dbt_project/packages.yml` - dbt packages (if needed) 

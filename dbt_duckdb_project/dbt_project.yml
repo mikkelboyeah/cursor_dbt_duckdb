@@ -1,8 +1,8 @@
-name: 'dbt_duckdb_project'
+name: 'dbt_project'
 version: '1.0.0'
 config-version: 2
 
-profile: 'dbt_duckdb_profile'
+profile: 'dbt_profile'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -17,7 +17,7 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  dbt_duckdb_project:
+  dbt_project:
     staging:
       +materialized: view
     intermediate:
