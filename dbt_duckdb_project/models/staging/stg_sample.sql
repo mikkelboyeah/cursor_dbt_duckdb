@@ -13,5 +13,5 @@ select
     id,
     product_name,
     price,
-    current_timestamp() as loaded_at
+    current_localtimestamp() as loaded_at
 from source_data 
