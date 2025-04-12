@@ -35,7 +35,7 @@ $UV_CMD venv .venv
 $UV_CMD pip install -r requirements.txt
 
 # Create data directory for DuckDB
-mkdir -p dbt_duckdb_project/data
+mkdir -p dbt_project/data
 
 echo ""
 echo "✅ Setup complete! Run the following to activate the environment:"
@@ -44,6 +44,6 @@ echo "   source .venv/bin/activate  # On Windows: .venv\\Scripts\\activate"
 echo ""
 echo "Then cd into the dbt project:"
 echo ""
-echo "   cd dbt_duckdb_project"
+echo "   cd dbt_project"
 echo "   dbt run"
 echo "" 

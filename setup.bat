@@ -16,7 +16,7 @@ REM Install dependencies using uv
 .tools\uv.exe pip install -r requirements.txt
 
 REM Create data directory for DuckDB
-mkdir dbt_duckdb_project\data 2>nul
+mkdir dbt_project\data 2>nul
 
 echo.
 echo ✅ Setup complete! Run the following to activate the environment:
@@ -25,6 +25,6 @@ echo    .venv\Scripts\activate
 echo.
 echo Then cd into the dbt project:
 echo.
-echo    cd dbt_duckdb_project
+echo    cd dbt_project
 echo    dbt run
 echo. 
